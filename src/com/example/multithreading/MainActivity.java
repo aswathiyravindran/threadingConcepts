@@ -73,7 +73,7 @@ Runnable run3=new Runnable(){
 		}
 		else
 		{
-			for(i=2;i<=(p/2);i++)
+			for(i=2;i<p;i++)
 			{
 				if(p%i==0)
 					count++;
@@ -87,8 +87,8 @@ Runnable run3=new Runnable(){
 				t.setTextColor(Color.GREEN);
 			}
 		}
-	
-	hand_obj.postDelayed(run3, 4000);
+	p++;
+	hand_obj.postDelayed(run3, 2000);
 	}
 	
 };
