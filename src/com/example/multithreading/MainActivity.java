@@ -36,7 +36,7 @@ Runnable run=new Runnable(){
 	{
 		// TODO Auto-generated method stub
 		c=a+b;
-		temp=temp + Integer.toString(c);
+		temp=temp + Integer.toString(c)+" ";
 	
 		t.setText("" +  temp);
 		t.setTextColor(Color.CYAN);
@@ -64,21 +64,28 @@ Runnable run3=new Runnable(){
 	public void run() 
 	{
 		// TODO Auto-generated method stub
-		
-		if(p==2){
-		prime=prime + Integer.toString(c);
+		int i,count=0;
+		if(p==2 || p==3 || p==5 || p==7){
+		prime=prime + Integer.toString(c)+ " ";
 	
 		t.setText(" " +  prime);
 		t.setTextColor(Color.GREEN);
 		}
-		else if(p%2!=0 || p%3!=0 || p%5!=0 || p%7!=0)
+		else
 		{
-			
-				prime=prime + Integer.toString(c);
+			for(i=2;i<p/2;)
+			{
+				if(p%i==0)
+					count++;
+					break;
+			}i++;
+			if(count!=0)
+			{
+				prime=prime + Integer.toString(c)+" ";
 				
 				t.setText(" " +  prime);
 				t.setTextColor(Color.GREEN);
-			
+			}
 		}
 	p++;
 	hand_obj.postDelayed(run3, 2000);
