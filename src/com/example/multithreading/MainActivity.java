@@ -64,28 +64,21 @@ Runnable run3=new Runnable(){
 	public void run() 
 	{
 		// TODO Auto-generated method stub
-		int i,count=0;
+		
 		if(p==2){
 		prime=prime + Integer.toString(c);
 	
-		t.setText("" +  prime);
+		t.setText(" " +  prime);
 		t.setTextColor(Color.GREEN);
 		}
-		else
+		else if(p%2!=0 || p%3!=0 || p%5!=0 || p%7!=0)
 		{
-			for(i=2;i<p;i++)
-			{
-				if(p%i==0)
-					count++;
-					break;
-			}
-			if(count!=0)
-			{
+			
 				prime=prime + Integer.toString(c);
 				
-				t.setText("" +  prime);
+				t.setText(" " +  prime);
 				t.setTextColor(Color.GREEN);
-			}
+			
 		}
 	p++;
 	hand_obj.postDelayed(run3, 2000);
