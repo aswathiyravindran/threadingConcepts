@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         //t.setText("");
         hand_obj.postDelayed(run, 1000);
         hand_obj.postDelayed(run2, 1000);
+        hand_obj.postDelayed(run3, 1000);
         
     }
 Runnable run=new Runnable(){
